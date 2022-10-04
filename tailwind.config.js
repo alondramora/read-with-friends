@@ -10,7 +10,11 @@ module.exports = {
       lg: '976px',
       xl: '1440px'
     },
-    extend: {},
+    extend: {
+      colors: {
+        lightishRed: '#EFAEA0'
+      }
+    },
   },
   plugins: [],
 }

@@ -27,9 +27,31 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
+    <!-- Nav bar-->
+    <nav class="relative container mx-auto p-6">
+      <!--Flex container-->
+     <div class="flex items-center justify-between">
+         <!--Logo-->
+         <div class="pt-2"> <!-- padding top 2-->
+            <img src="imgs/books.svg" class="w-40" alt="stack of books">
+        </div>
+         <!-- Menu Items-->
+         <div class="hidden md:flex space-x-6">
+             <a href="#" class="hover:text-red-500">Product</a>
+             <a href="#" class="hover:text-red-500">About Us</a>
+             <a href="#" class="hover:text-red-500">Careers</a>
+             <a href="#" class="hover:text-red-500">Community</a>
+         </div>
+         <!--Button-->
+         <!-- <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">Get Started</a> -->
+
+     </div>
+    </nav>
+
+    <!-- Header -->
     <header class="">
       <div class="">
-        <h1 class="text-4xl text-center font-bold my-8"><a href="/profile">Read with Friends</a></h1>
+        <h1 class="text-4xl text-center font-bold my-8 italic"><a href="/profile">Read with Friends</a></h1>
         <p class="text-center text-2xl">Keep up with what your friends are reading and share your favorites too!</p>
       </div>
     </header>

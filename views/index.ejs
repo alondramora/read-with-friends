@@ -1,11 +1,12 @@
 <%- include('partials/header') -%>
 
 <main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+    <div class="flex flex-col justify-center md:flex-row space-x-4"> <!-- need to fix so that column on mobile is centered--> 
+        <a href="/login" class="hover:text-red-500"> Login</a>
+        <a href="/signup" class="hover:text-red-500"> Signup</a>
     </div>
 </main>
     
+<!-- col-3 btn btn-primary -->
 
 <%- include('partials/footer') -%>
