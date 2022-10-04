@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        lightishRed: '#EFAEA0'
+        lightishRed: '#EFAEA0',
+        kindaOrange: '#BF3B28'
       }
     },
   },
