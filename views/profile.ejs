@@ -1,22 +1,59 @@
-<%- include('partials/header') -%>
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read with Friends</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+
+<div class="flex justify-center mt-7 md:justify-start">
+  <p class="text-2xl">Hello <strong><%= user.userName %></strong>,</p>
+</div>
+
+
+<div class="flex flex-col justify-start mt-7">
+  <h3 class="text-2xl pl-5 mb-5">Add a book:</h3>
+    <div>
+      <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label pl-5">Title</label>
+                  <input type="text" class="form-control border-2 border-black-500" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label pl-5">Caption</label>
+                <textarea class="form-control border-2 border-black-500" id="caption" name="caption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label pl-5">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button type="submit" class="mt-10 btn btn-primary block p-3 px-6 pt-2 text-white bg-kindaOrange rounded-full baseline hover:bg-black" value="Upload">Submit</button>
+            </form>
+    </div>
+</div>
+
+
+<!-- Here is where the OG code begins-->
+<div class="flex justify-center">
   <div class="row mt-5">
-      <div class="col-6">
-          <div>
+      <!-- <div class="col-6"> -->
+          <!-- <div>
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
-          <div class="mt-5">
-            <h2>Add a read</h2>
+          </div> -->
+          <!-- <div class="mt-5">
+            <h2>Add a book:</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <input type="text" class="form-control border-2 border-black-500" id="title" name="title">
               </div>
               <div class="mb-3">
                 <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
+                <textarea class="form-control border-2 border-black-500" id="caption" name="caption"></textarea>
               </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
@@ -24,23 +61,28 @@
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
-          </div>
-      </div>
+          </div> -->
+      <!-- </div> -->
       <div class="col-6">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+              <img class="img-fluid w-40" src="<%= posts[i].image%>">
             </a>
           </li>
         <% } %>
         </ul>
         <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
+          <a href="/logout" class="block"> Logout</a>
+
         </div>  
       </div>  
     </div>
   </div>
 </div>
+
+
+
 <%- include('partials/footer') -%>
