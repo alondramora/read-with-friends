@@ -1300,6 +1300,15 @@ html {
   outline-offset: 2px;
 }
 
+.input-secondary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+}
+
+.input-secondary:focus {
+  outline: 2px solid hsl(var(--s));
+}
+
 .input-disabled, 
   .input[disabled] {
   cursor: not-allowed;
@@ -1570,6 +1579,18 @@ html {
   margin-top: 1.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1616,6 +1637,10 @@ html {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .flex-none {
@@ -1761,6 +1786,11 @@ html {
 
 .text-xl {
   font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 

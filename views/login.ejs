@@ -1,40 +1,51 @@
 <%- include('partials/header') -%>
 
-<main class="container">
-  <div class="row justify-content-center">
-    <section class="col-6 mt-5">
+
+<div class="flex justify-center mt-20 text-4xl">
+  <h2>Login</h2>
+</div>
+
+<main class="flex justify-center mt-20">
+
+  <div class="flex justify-center flex-col">
       <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
       <div class="alert alert-danger"><%= el.msg %></div>
       <% }) %> <% } %> <% if (locals.messages.info) { %> <%
       messages.info.forEach( el => { %>
       <div class="alert alert-info"><%= el.msg %></div>
       <% }) %> <% } %>
+  </div>
+
+      <!-- Email -->
       <form action="/login" method="POST">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            name="email"
-          />
+          <label for="exampleInputEmail1" class="form-label text-lg"
+            >Email address</label> 
+         
+          <input 
+          type="email" 
+          placeholder="Email" 
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          class="form-control input input-bordered input-secondary w-full max-w-xs" />
         </div>
+
+        <!--Password -->
+
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="exampleInputPassword1" class="form-label text-lg">Password</label>
           <input
             type="password"
-            class="form-control"
+            class="form-control input input-bordered input-secondary w-full max-w-xs"
             id="exampleInputPassword1"
             name="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary block p-3 px-6 pt-2 text-white bg-kindaOrange rounded-full baseline hover:bg-black">Submit</button>
+        <div class="flex justify-center mt-10">        
+          <button type="submit" class="btn btn-primary">Button</button>
+        </div>
       </form>
-    </section>
-  </div>
 </main>
 
 <%- include('partials/footer') -%>
