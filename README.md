@@ -3,7 +3,7 @@ Read with Friends is a full stack web application that allows users to post abou
 
 **Link to project:** Coming Soon
 
-![alt tag](http://placecorgi.com/1200/650)
+![screenshot of a white webpage, title "Read with Friends" is in the center", two purple buttons prompting a user to login or sign up](public/imgs/website-screenshot.png)
 
 ## How It's Made:
 
