@@ -90,7 +90,7 @@ exports.postSignup = (req, res, next) => {
     password: req.body.password,
   });
 
-  User.findOne(
+  User.findOne( // checking that the user doesn't exist
     { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
     (err, existingUser) => {
       if (err) {
