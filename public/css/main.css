@@ -1952,6 +1952,14 @@ html {
   padding-top: 5rem;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2097,6 +2105,11 @@ html {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
