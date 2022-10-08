@@ -1,11 +1,10 @@
 <%- include('partials/header') -%>
 
-    <!-- <main class="container">
-        <div class="row justify-content-center">
-            <section class="col-6 mt-5"> -->
+
               <!-- Error messages -->
 
               <section class="flex align-items min-h-screen md:justify-center">
+                <!-- <section class="flex flex-col items-center mt-8"> -->
                 <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
                         <div class="alert alert-danger"><%= el.msg %></div>
@@ -45,11 +44,13 @@
                       </div>
 
               <!-- Submit button-->
+              <div class="flex justify-center">
                     <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
                   </form>
+                  </div>
             </section>
-            <!-- </section>
-        </div>
-    </main> -->
+
+            
 
 <%- include('partials/footer') -%>
