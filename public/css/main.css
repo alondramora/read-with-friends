@@ -1337,6 +1337,15 @@ html {
   outline: 2px solid hsl(var(--s));
 }
 
+.input-accent {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--a) / var(--tw-border-opacity));
+}
+
+.input-accent:focus {
+  outline: 2px solid hsl(var(--a));
+}
+
 .input-disabled, 
   .input[disabled] {
   cursor: not-allowed;
@@ -1366,6 +1375,21 @@ html {
 .link:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+.menu.horizontal li.bordered > a, 
+        .menu.horizontal li.bordered > button, 
+        .menu.horizontal li.bordered > span {
+  border-left-width: 0px;
+  border-bottom-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+}
+
+.menu :where(li.bordered > *) {
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
 @-webkit-keyframes progress-loading {
@@ -1559,6 +1583,16 @@ html {
   padding: var(--padding-card, 2rem);
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.menu-vertical :where(li.bordered > *) {
+  border-left-width: 4px;
+  border-bottom-width: 0px;
+}
+
+.menu-horizontal :where(li.bordered > *) {
+  border-left-width: 0px;
+  border-bottom-width: 4px;
 }
 
 .absolute {
@@ -1991,6 +2025,11 @@ html {
 .text-neutral-content {
   --tw-text-opacity: 1;
   color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+
+.text-accent {
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
