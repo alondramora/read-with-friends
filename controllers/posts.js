@@ -1,5 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
-const Post = require("../models/Post");
+const Post = require("../models/Post"); // this model comes from the models/Post.js (Mongoose created it)
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -20,6 +20,8 @@ module.exports = {
   },
   getPost: async (req, res) => {
     try {
+      // Go to the Post (posts in mongodb) collection and find a doc that has the id that came from the url
+      // Then we store it in the variable const post
       const post = await Post.findById(req.params.id);
       res.render("post.ejs", { post: post, user: req.user });
     } catch (err) {

@@ -7,13 +7,16 @@
                 <section class="flex flex-col items-center min-h-screen md:justify-center">
                 <!-- <section class="flex flex-col items-center mt-8"> -->
 
-                  <div class="flex justify-center pt-10 pb-10 text-4xl">
+                  <div class="flex justify-center pb-10 text-4xl">
   <h2>Create Account</h2>
 </div>
 
-                <% if (locals.messages.errors) { %>
+              <!-- Username, email, and password entries -->
+                <form action="/signup" method="POST" class="flex flex-col">
+
+                  <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
-                        <div class="alert alert-danger"><%= el.msg %></div>
+                        <div class="alert alert-danger mb-2"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
                 <% if (locals.messages.info) { %>
@@ -21,9 +24,6 @@
                         <div class="alert alert-info"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
-
-              <!-- Username, email, and password entries -->
-                <form action="/signup" method="POST" class="flex flex-col">
                     <!-- Username-->
                     <div class="mb-3"> 
                         <label for="userName" class="form-label text-lg">User Name</label>
@@ -41,12 +41,12 @@
                     <!-- Password -->
                     <div class="mb-3">
                       <label for="password" class="form-label text-lg">Password</label>
-                      <input type="password" class="form-control input bordered input-secondary w-full max-w-xs" id="password" name="password">
+                      <input type="password" placeholder="Password" class="form-control input bordered input-secondary w-full max-w-xs" id="password" name="password">
                     </div>
                     <!-- Confirm Password-->
                     <div class="mb-5"> 
                         <label for="confirmPassword" class="form-label text-lg">Confirm Password</label>
-                        <input type="password" class="form-control input bordered input-secondary w-full max-w-xs" id="confirmPassword" name="confirmPassword">
+                        <input type="password" placeholder="Password" class="form-control input bordered input-secondary w-full max-w-xs" id="confirmPassword" name="confirmPassword">
                       </div>
 
               <!-- Submit button-->

@@ -2,37 +2,50 @@
   <%- include('partials/header') -%>
 
   <!-- Hello, User-->
-<div class="flex justify-center mt-7 md:justify-start pl-8">
+<div class="flex justify-center mt-7 md:justify-start">
   <p class="text-2xl">Hello <strong><%= user.userName %></strong>,</p>
 </div>
 
+<!-- Container for avatar-->
+<div class="flex justify-center mt-5">
+<div class="avatar">
+  <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+</div>
+
+
 <!-- Add a book section-->
-<div class="flex flex-col justify-start mt-7">
-  <h3 class="text-2xl pl-8 mb-5">Add a book</h3>
-    <div>
-      <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+<div class="flex flex-col mt-7">
+  <h3 class="text-2xl mb-5">Add a book</h3>
+    <!-- <div class=""> -->
+      <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="flex flex-col justify-center items-center">
               <div class="mb-3">
-                  <label for="title" class="form-label pl-10">Title:</label>
+                  <label for="title" class="form-label">Title:</label>
                   <input type="text" class="form-control border-2 border-black-500" id="title" name="title">
               </div>
               <div class="mb-8">
-                <label for="caption" class="form-label pl-10">Caption:</label>
+                <label for="caption" class="form-label">Caption:</label>
                 <textarea class="form-control border-2 border-black-500" id="caption" name="caption"></textarea>
               </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label pl-10">Share a photo of your book:</label>
                 <input type="file" class="form-control pl-10 mt-3" id="imageUpload" name="file">
               </div>
+
+              <!--button -->
+              <div class="flex justify-center">
+                <button type="submit" class="mt-6 btn btn-primary block p-3 px-6 pt-2 text-white bg-secondary rounded-full baseline hover:bg-black justify-center" value="Upload">Submit
+                </button>
+              </div>
             </form>
     </div>
 </div>
 
-<!--Submit button-->
-<div class="flex justify-center md:justify-start pl-10">
-   <button type="submit" class="mt-10 btn btn-primary block p-3 px-6 pt-2 text-white bg-kindaOrange rounded-full baseline hover:bg-black justify-center" value="Upload">Submit</button>
-
+<div class="flex justify-center text-xl pt-5">
+  <h2> Your Posts</h2>
 </div>
-
 
 <!-- Here is where the OG code begins-->
 <div class="flex justify-center">
@@ -49,14 +62,17 @@
         </ul>
 
         <!--Return to feed and logout links -->
-        <div class="row justify-content-center mt-10">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-          <a href="/logout" class=""> Logout</a>
+        <div class="row col justify-content-center mt-10 mb-2">
+          <a class="btn btn-secondary text-white" href="/feed">Return to Feed</a>
         </div>  
+
+        <div class="row col justify-content-center mb-4">
+                    <a class ="btn btn-secondary text-white" href="/logout" class=""> Logout</a>
+
+        </div>
       <!-- </div>   -->
   </div>
 </div>
-
 
 <!--Footer-->
 <%- include('partials/footer') -%>
