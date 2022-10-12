@@ -2,7 +2,7 @@
   <%- include('partials/header') -%>
 
   <!-- Hello, User-->
-<div class="flex justify-center mt-7 md:justify-start">
+<div class="flex justify-center mt-7">
   <p class="text-2xl">Hello <strong><%= user.userName %></strong>,</p>
 </div>
 
@@ -17,8 +17,8 @@
 
 
 <!-- Add a book section-->
-<div class="flex flex-col mt-7">
-  <h3 class="text-2xl mb-5">Add a book</h3>
+<div class="flex flex-col mt-7 items-center">
+  <h3 class="text-2xl mb-5">Add a book:</h3>
     <!-- <div class=""> -->
       <form action="/post/createPost" enctype="multipart/form-data" method="POST" class="flex flex-col justify-center items-center">
               <div class="mb-3">
@@ -43,7 +43,7 @@
     </div>
 </div>
 
-<div class="flex justify-center text-xl pt-5">
+<div class="flex justify-center text-xl mt-20">
   <h2> Your Posts</h2>
 </div>
 
