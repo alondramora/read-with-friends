@@ -504,53 +504,6 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
-::-webkit-backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
-
 ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -700,9 +653,9 @@ html {
   border-color: transparent;
   border-color: hsl(var(--n) / var(--tw-border-opacity));
   text-align: center;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: var(--rounded-btn, 0.5rem);
@@ -716,11 +669,9 @@ html {
   font-weight: 600;
   text-transform: uppercase;
   text-transform: var(--btn-text-case, uppercase);
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
   border-width: var(--border-btn, 1px);
-  -webkit-animation: button-pop var(--animation-btn, 0.25s) ease-out;
-          animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
@@ -750,8 +701,7 @@ html {
   width: 1rem;
   border-radius: 9999px;
   border-width: 2px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
   content: "";
   border-top-color: transparent;
   border-left-color: transparent;
@@ -761,18 +711,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .btn.loading:before {
-    -webkit-animation: spin 10s linear infinite;
-            animation: spin 10s linear infinite;
-  }
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
+    animation: spin 10s linear infinite;
   }
 }
 
@@ -867,9 +806,9 @@ html {
 
 .input {
   flex-shrink: 1;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   height: 3rem;
@@ -897,7 +836,6 @@ html {
 
 .link {
   cursor: pointer;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
 
@@ -916,9 +854,9 @@ html {
 
 .textarea {
   flex-shrink: 1;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 1rem;
@@ -1029,8 +967,7 @@ html {
 
 .btn:active:hover,
   .btn:active:focus {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   transform: scale(var(--btn-focus-scale, 0.95));
 }
 
@@ -1187,20 +1124,6 @@ html {
   outline: 2px solid hsl(var(--p));
 }
 
-@-webkit-keyframes button-pop {
-  0% {
-    transform: scale(var(--btn-focus-scale, 0.95));
-  }
-
-  40% {
-    transform: scale(1.02);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes button-pop {
   0% {
     transform: scale(var(--btn-focus-scale, 0.95));
@@ -1219,20 +1142,6 @@ html {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
-}
-
-@-webkit-keyframes checkmark {
-  0% {
-    background-position-y: 5px;
-  }
-
-  50% {
-    background-position-y: -2px;
-  }
-
-  100% {
-    background-position-y: 0;
-  }
 }
 
 @keyframes checkmark {
@@ -1334,29 +1243,9 @@ html {
   border-color: hsl(var(--p) / var(--tw-border-opacity));
 }
 
-@-webkit-keyframes progress-loading {
-  50% {
-    left: 107%;
-  }
-}
-
 @keyframes progress-loading {
   50% {
     left: 107%;
-  }
-}
-
-@-webkit-keyframes radiomark {
-  0% {
-    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
-  }
-
-  50% {
-    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
-  }
-
-  100% {
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
   }
 }
 
@@ -1371,20 +1260,6 @@ html {
 
   100% {
     box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
-  }
-}
-
-@-webkit-keyframes rating-pop {
-  0% {
-    transform: translateY(-0.125em);
-  }
-
-  40% {
-    transform: translateY(-0.125em);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 }
 
@@ -1426,18 +1301,6 @@ html {
   .textarea[disabled]::placeholder {
   color: hsl(var(--bc) / var(--tw-placeholder-opacity));
   --tw-placeholder-opacity: 0.2;
-}
-
-@-webkit-keyframes toast-pop {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 @keyframes toast-pop {
@@ -1559,6 +1422,10 @@ html {
   margin-top: 1.25rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -1583,8 +1450,8 @@ html {
   margin-bottom: 0.75rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .mt-7 {
@@ -1603,24 +1470,12 @@ html {
   margin-top: 1.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
 
-.ml-20 {
-  margin-left: 5rem;
-}
-
-.ml-0 {
-  margin-left: 0px;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .block {
@@ -1635,20 +1490,32 @@ html {
   display: flex;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-5 {
   height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-24 {
@@ -1657,30 +1524,6 @@ html {
 
 .w-40 {
   width: 10rem;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-20 {
-  width: 5rem;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .max-w-md {
@@ -1719,10 +1562,6 @@ html {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -1745,9 +1584,9 @@ html {
   border-width: 2px;
 }
 
-.bg-base-200 {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
@@ -1758,16 +1597,6 @@ html {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-base-100 {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -1800,8 +1629,8 @@ html {
   padding-top: 5rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
+.pl-0 {
+  padding-left: 0px;
 }
 
 .pl-10 {
@@ -1812,24 +1641,8 @@ html {
   padding-top: 0.5rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
 }
 
 .text-center {
@@ -1844,6 +1657,11 @@ html {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .text-2xl {
@@ -1899,16 +1717,8 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:ml-20 {
-    margin-left: 5rem;
-  }
-
   .md\:flex {
     display: flex;
-  }
-
-  .md\:justify-start {
-    justify-content: flex-start;
   }
 
   .md\:justify-center {

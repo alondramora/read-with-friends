@@ -1,9 +1,70 @@
-<%- include('partials/header') -%>
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read with Friends</title>
+    <base href='/'>
+   <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+   <!--font awesome link-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="min-h-screen">
+    
+   <!-- Navbar-->
+  <div class="navbar white">
+  <div class="flex-none">
+    <button class="btn btn-square btn-ghost p">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+  <div class="flex-1">
+    <a href="/" class="btn btn-ghost normal-case pl-0 md:text-xl">Home 
+    <svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+    </a>
+  </div>
+  <div class="flex-none">
+    <button class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+    </button>
+  </div>
+</div>
+<h1 class="text-red"> Testing</h1>      
+<h2 class="text-9xl"><%= post.title %></h2>
+      <img class="w-2" src="<%= post.image%>" />
+      <!-- <div class="row justify-content-between"> -->
+        <form
+          class="col-1"
+          action="/post/likePost/<%= post.id %>?_method=PUT"
+          method="POST"
+        >
+          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+        </form>
+        <h3 class="col-3">Likes: <%= post.likes %></h3>
+        <%if(post.user == user.id){ %>
+        <form
+          action="/post/deletePost/<%= post.id %>?_method=DELETE"
+          method="POST"
+          class="col-3"
+        >
+          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+        </form>
+        <%}%>
+      
+      <p><%= post.caption %></p>
+      <a class="btn btn-primary" href="/profile">Return to Profile</a>
+      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+  <!-- </div> -->
+
+<%- include('partials/footer') -%>
+
+<!-- <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= post.title %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
+      <img class="w-2" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form
           class="col-1"
@@ -32,6 +93,4 @@
       <a class="btn btn-primary" href="/feed">Return to Feed</a>
     </div>
   </div>
-</div>
-
-<%- include('partials/footer') -%>
+</div> -->
