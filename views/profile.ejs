@@ -29,9 +29,9 @@
                 <label for="caption" class="form-label">Caption:</label>
                 <textarea class="form-control border-2 border-black-500" id="caption" name="caption"></textarea>
               </div>
-              <div class="mb-3 pl-14">
-                <label for="imgUpload" class="form-label pl-10">Share a photo of your book:</label>
-                <input type="file" class="form-control pl-10 mt-3" id="imageUpload" name="file">
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Share a photo of your book:</label>
+                <input type="file" class="form-control mt-3" id="imageUpload" name="file">
               </div>
 
               <!--button -->
@@ -44,17 +44,17 @@
 </div>
 
 <div class="flex justify-center text-xl mt-20">
-  <h2 class="text-red-500"> Your Posts</h2>
+  <h2 class=""> Your Posts</h2>
 </div>
 
 <!-- Here is where the OG code begins-->
 <div class="flex justify-center">
   <div class="row mt-5">
       <!-- <div class="col-6"> -->
-        <ul class="flex flex-col md:flex flex-row>
+        <ul class="flex flex-col md:flex-row>
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
+            <a class="flex justify-center" href="/post/<%= posts[i]._id%>">
               <img class="img-fluid w-40" src="<%= posts[i].image%>">
             </a>
           </li>
@@ -63,7 +63,7 @@
 
         <!--Return to feed and logout links -->
         
-          <div class="flex flex-col mt-4 mb-4 space-y-4 md:flex-row">
+          <div class="flex flex-col mt-4 mb-4 md:flex-row gap-4">
           <a class="btn btn-secondary text-white" href="/feed">Return to Feed</a>
           <a class ="btn btn-secondary text-white" href="/logout" class=""> Logout</a>
           </div>
