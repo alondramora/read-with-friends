@@ -1,5 +1,5 @@
 const express = require("express"); // helps us build out our API
-const app = express(); // use using express
+const app = express(); // use using express: app.use, app.set. etc...
 const mongoose = require("mongoose"); // talk to mongodb db using mongoose
 const passport = require("passport"); // authentication, enables us to use different strategies for diff types of logins
 const session = require("express-session"); // makes sure our users can stay logged in while moving across sessions, uses cookies stored on client

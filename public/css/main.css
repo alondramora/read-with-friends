@@ -1390,8 +1390,16 @@ html {
   border-bottom-width: 4px;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .m-auto {
@@ -1464,6 +1472,10 @@ html {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .block {
