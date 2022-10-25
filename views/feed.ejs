@@ -6,9 +6,9 @@
   <!-- </section> -->
 <!-- row justify-content-center mt-5 -->
 
-      <ul class="flex col md:flex row justify-center flex-wrap space-x-4  space-y-4 mt-10">
+      <ul class="sm:flex-col justify-center md:flex row justify-center flex-wrap space-x-4  space-y-4 mt-10">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between">
+          <li class="flex justify-center">
             <a href="/post/<%= posts[i]._id%>">
               <img class="w-16 md:w-36 " src="<%= posts[i].image%>">
             </a>
