@@ -1,7 +1,7 @@
 {
-  "name": "binary-upload-boom",
+  "name": "Read with Friends",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "A social network to share what you and your friends are reading.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
